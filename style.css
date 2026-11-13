@@ -1,0 +1,141 @@
+/* Étape 1 — Les couleurs et les espacements de la maquette. */
+:root {
+  --couleur-principale: #8a4b1f;
+  --couleur-fond: #fbf3e4;
+  --couleur-texte: #2b2118;
+  --espace: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--couleur-texte);
+}
+
+/* Étape 2 — Le logo à gauche et les liens à droite. */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--espace);
+  padding: 1rem var(--espace);
+  background: var(--couleur-principale);
+  color: #fff;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem var(--espace);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  padding: 4rem var(--espace);
+  background: var(--couleur-fond);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  color: var(--couleur-principale);
+}
+
+header p {
+  margin: 0;
+}
+
+/* Étape 3 — Les sections et les quatre cartes de produits. */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem var(--espace);
+}
+
+h2 {
+  margin: 0 0 var(--espace);
+  color: var(--couleur-principale);
+  font-size: 1.5rem;
+}
+
+.produits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace);
+}
+
+.produit {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 1rem;
+  background: var(--couleur-fond);
+  border-radius: 8px;
+}
+
+.produit img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.produit h3 {
+  font-size: 1.125rem;
+}
+
+.produit-bouton:hover {
+  color: crimson;
+}
+
+.prix {
+  color: var(--couleur-principale);
+  font-weight: bold;
+}
+
+/* Étape 4 — À 390 px, le menu est en colonne et les cartes se replient. */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Le panier dans le menu */
+.panier {
+  margin: 0;
+  color: #ffffff;
+}
+
+.panier-bouton {
+  margin: 0;
+  color: #ffffff;
+  background-color: #8A4B1F;
+}
+
+/* Une classe pour cacher un élément */
+.cache {
+  display: none;
+}
